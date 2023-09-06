@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class PlayerinputController : SpartaTownController
 {
     private Camera _camera;
-
     private void Awake()
     {
         _camera = Camera.main;
@@ -16,6 +15,7 @@ public class PlayerinputController : SpartaTownController
     {
         Vector2 moveInput = value.Get<Vector2>().normalized;
         CallMoveEvent(moveInput);
+        
     }
 
     public void OnLook(InputValue value)
